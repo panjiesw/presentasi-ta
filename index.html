@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Perancangan dan Implementasi Sistem Akses Buku Digital - Tugas Akhir</title>
+
+        <meta name="description" content="Tugas Akhir sebagai syarat kelulusan studi sarjana Teknik Telekomunikasi ITB">
+        <meta name="author" content="Panjie Wicaksono">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+            .reveal .slides {
+                text-align: left;
+            }
+            .bluelink {
+                color: #268bd2;
+            }
+            .middle {
+                text-align: center;
+            }
+            .pdesc {
+                margin-left: 45px !important;
+            }
+        </style>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+                    <h1>Tugas Akhir</h1>
+                    <h3>Perancangan dan Implementasi Sistem Akses Buku Digital untuk Perangkat Bergerak</h3>
+                    <p>
+                        <small>Oleh <span class="bluelink">Panjie Setiawan Wicaksono</span> / <span class="bluelink">13207064</span></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Tugas Akhir II</h2>
+                    <!-- <p>Pembimbing: <span class="bluelink">Dr.-Ing. Eueung Mulyana ST. MSc.</span></p>
+                    <p>Judul: <span class="bluelink">Perancangan dan Implementasi Sistem Akses Buku Digital untuk Perangkat Bergerak.</span></p>
+                    <p>Kata Kunci: <strong><i>buku digital, client, server, integrasi</i></strong></p> -->
+                    <ul>
+                        <li>Pembimbing: <span class="bluelink">Dr.-Ing. Eueung Mulyana ST. MSc</span></li>
+                        <li>Judul: <span class="bluelink">Perancangan dan Implementasi Sistem Akses Buku Digital untuk Perangkat Bergerak</span></li>
+                        <li>Kata Kunci: <strong><i>buku digital, client, server, integrasi</i></strong></li>
+                    </ul>
+                </section>
+
+                <section data-state="soothe">
+                    <h2 class="middle">Pendahuluan</h2>
+                </section>
+
+                <section data-state="soothe">
+                    <section data-transition="zoom">
+                        <h2>Latar Belakang</h2>
+                        <p class="middle">Perkembangan Teknologi Informasi</p>
+                        <p class="middle fragment roll-in"><i class="icon-arrow-down"></i><br>
+                            Konten Digital (Buku, dsb)</p>
+                        <p class="middle fragment roll-in"><i class="icon-arrow-down"></i><br>
+                            Tersebar + Belum Ada Integrasi Penuh</p>
+                        <p class="middle fragment roll-in bluelink"><i class="icon-arrow-down"></i><br>
+                            Sistem Akses Buku Digital</p>
+                    </section>
+
+                    <section data-transition="linear">
+                        <h2>Tujuan</h2>
+                        <ol style="width: 100%;">
+                            <li>
+                                Merancang sistem akses buku digital.
+                                <p class="middle fragment roll-in">Akses perpustakaan digital</p>
+                                <p class="middle fragment roll-in">+<br>Membaca buku digital</p>
+                                <p class="middle fragment roll-in">+<br>Backup data di <i class="bluelink">cloud</i></p>
+                            </li>
+                            <li class="fragment roll-in">
+                                Mengimplementasikannya.
+                                <p class="middle fragment roll-in bluelink">ITBookReader</p>
+                                <p class="middle fragment roll-in"><br>Perangkat bergerak <span class="bluelink">Android</span></p>
+                                <p class="middle fragment roll-in"><br>Target pengguna: semua kalangan</p>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section data-transition="linear">
+                        <h2>Lingkup dan Batasan</h2>
+                        <ol style="width: 100%;">
+                            <li>Implementasi: Sistem Operasi <span class="bluelink">Android</span></li>
+                            <li class="fragment roll-in">Pembaca buku digital: <span class="bluelink">PDF</span> &amp; <span class="bluelink">EPub</span></li>
+                            <li class="fragment roll-in">Infrastruktur server: Penyedia jasa</li>
+                            <li class="fragment roll-in">Java &amp; Python</li>
+                        </ol>
+                    </section>
+
+                    <section data-transition="linear">
+                        <h2>Metodologi</h2>
+                        <p class="middle">
+                            <span>Penentuan Topik</span><br>
+                            <span class="fragment roll-in"><i class="icon-arrow-down"></i><br>Riset Permasalahan</span><br>
+                            <span class="fragment roll-in"><i class="icon-arrow-down"></i><br>Perancangan Sistem</span><br>
+                            <span class="fragment roll-in"><i class="icon-arrow-down"></i><br>Kajian Pustaka Literatur + Program</span><br>
+                            <span class="fragment roll-in"><i class="icon-arrow-down"></i><br>Implementasi</span><br>
+                        </p>
+                    </section>
+                </section>
+
+                <section data-state="lila">
+                    <h2 class="middle">Dasar Teori</h2>
+                </section>
+
+                <section data-state="lila">
+                    <section>
+                        <h2>Buku Digital</h2>
+                        <p class="fragment roll-in">Definisi</p>
+                        <p class="pdesc fragment roll-in">Bentuk publikasi konten buku</p>
+                        <p class="pdesc fragment roll-in">Kata-kata + gambar + konten lain</p>
+                        <p class="pdesc fragment roll-in">Media atau perangkat elektronik</p>
+                        <br>
+                        <p class="fragment roll-in">Keunggulan</p>
+                        <p class="pdesc fragment roll-in">Ramah lingkungan</p>
+                        <p class="pdesc fragment roll-in">Fleksibilitas akses</p>
+                        <p class="pdesc fragment roll-in">Variasi konten</p>
+                        <p class="pdesc fragment roll-in">Efisien</p>
+                    </section>
+
+                    <section>
+                        <h2>Buku Digital - Definisi PDF</h2>
+                        <p>Portable Document Format</p>
+                        <p class="fragment roll-in">Adobe Systems</p>
+                        <p class="fragment roll-in">PostScript + Sistem Embed + Sistem Enkapsulasi</p>
+                        <pre class="fragment roll-in"><code data-trim>
+                            %!PS
+/Courier             % name the desired font
+20 selectfont        % choose the size in points and establish 
+                     % the font as the current one
+72 500 moveto        % position the current point at 
+                     % coordinates 72, 500 (the origin is at the 
+                     % lower-left corner of the page)
+(Hello world!) show  % stroke the text in parentheses
+showpage             % print all on the page
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Buku Digital - Struktur PDF</h2>
+                        <p class="middle">
+                            <img src="img/pdf-structure.png" alt="PDF Structure" title="PDF Structure" width="247" height="247">
+                        </p>
+                        <p class="fragment roll-in">Header: Informasi versi PDF</p>
+                        <p class="fragment roll-in">Body: Informasi obyek</p>
+                        <p class="fragment roll-in">Xref table: Penunjuk + identifikasi obyek</p>
+                        <p class="fragment roll-in">Trailer: Akhir dokumen</p>
+                    </section>
+
+                    <section>
+                        <h2>Buku Digital - Definisi Epub</h2>
+                        <p>Electronic Publication</p>
+                        <p class="fragment roll-in">IDPF - International Digital Publishing Forum</p>
+                        <p class="fragment roll-in">File kompresi ZIP</p>
+                        <p class="fragment roll-in">Konten dalam file markup (X)HTML</p>
+                    </section>
+
+                    <section>
+                        <h2>Buku Digital - Struktur Epub (1)</h2>
+                        <p class="fragment roll-in">OCF - Open Container Format</p>
+                        <p class="pdesc fragment roll-in">Enkapsulasi dokumen-dokumen penyusun epub</p>
+                        <p class="pdesc fragment roll-in">ZIP - Sistem file virtual</p>
+                        <p class="pdesc fragment roll-in">Folder META-INF {file 'container.xml'}</p>
+                        <p class="fragment roll-in">OPS - Open Publication Structure</p>
+                        <p class="pdesc fragment roll-in">Dokumen isi buku</p>
+                        <p class="pdesc fragment roll-in">.html atau .xhtml {text, gambar, css}</p>
+                        <p class="fragment roll-in">OPF - Open Packaging Format</p>
+                        <p class="pdesc fragment roll-in">File .opf</p>
+                        <p class="pdesc fragment roll-in">Lokasi dicantumkan pada 'container.xml'</p>
+                        <p class="pdesc fragment roll-in">Metadata, daftar isi, identifikasi buku</p>
+                    </section>
+
+                    <section>
+                        <h2>Buku Digital - Struktur Epub (2)</h2>
+                        <p class="middle">
+                            <img src="img/epub-structure.jpg" alt="EPub Structure" title="EPub Structure" width="650">
+                        </p>
+                    </section>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: 'cube', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
