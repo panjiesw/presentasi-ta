@@ -205,6 +205,115 @@ showpage             % print all on the page
                             <img src="img/epub-structure.jpg" alt="EPub Structure" title="EPub Structure" width="650">
                         </p>
                     </section>
+
+                    <section>
+                        <h2>Java</h2>
+                        <p class="fragment roll-in">Object Oriented Programming</p>
+                        <p class="fragment roll-in">WORA - Write Once Run Anywhere</p>
+                        <p class="pdesc fragment roll-in">Java Virtual Machine</p>
+                        <p class="pdesc"><span class="fragment roll-in">.java </span><span class="fragment roll-in"><i class="icon-arrow-right"></i> kompilasi </span><span class="fragment roll-in"><i class="icon-arrow-right"></i> .class (bytecode) </span><span class="fragment roll-in"><i class="icon-arrow-right"></i> eksekusi</span></p>
+                        <p class="fragment roll-in"><i>low level</i>: Java <i class="icon-double-angle-left"></i> C/C++</p>
+                        <p class="fragment roll-in"><i>class</i> &amp; <i>object</i></p>
+                        <p class="fragment roll-in">JRE - Java Runtime Environment (7u21)</p>
+                        <p class="fragment roll-in">JDK - Java Development Kit (7u21)</p>
+                    </section>
+
+                    <section>
+                        <h2>Java (2)</h2>
+                        <p>HelloWorld.java: </p>
+                        <pre class="fragment roll-in"><code data-trim>
+                            class
+{
+    public static void main(string[] args)
+    {
+        System.out.println("Hello World!");
+    }
+}
+                        </code></pre>
+                        <p class="fragment roll-in">Kompilasi + Eksekusi: </p>
+                        <p class="middle fragment roll-in"><img src="img/java-exc.jpg"></p>
+                        <p class="fragment roll-in">HelloWorld.class: </p>
+                        <p class="middle fragment roll-in"><img src="img/java-class.jpg" height="100"></p>
+                    </section>
+
+                    <section>
+                        <h2>Java + Maven</h2>
+                        <p class="fragment roll-in">Memudahkan proses <i>build</i></p>
+                        <p class="fragment roll-in">Sistem <i>build</i> yg seragam</p>
+                        <p class="fragment roll-in">Informasi kualitas proyek</p>
+                        <p class="fragment roll-in">Kerangka dan standar</p>
+                        <p class="fragment roll-in">Logika <i>update</i> pustaka</p>
+                    </section>
+
+                    <section>
+                        <h2>Java + Maven (2)</h2>
+                        <p class="fragment roll-in">pom.xml: </p>
+                        <pre class="fragment roll-in"><code data-trim>
+                            <project>
+  <!-- model version is always 4.0.0 for Maven 2.x POMs -->
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <!-- project coordinates, i.e. a group of values which
+       uniquely identify this project -->
+ 
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>my-app</artifactId>
+  <version>1.0</version>
+ 
+  <!-- library dependencies -->
+ 
+  <dependencies>
+    <dependency>
+ 
+      <!-- coordinates of the required library -->
+ 
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+ 
+      <!-- this dependency is only used for 
+      running and compiling tests -->
+ 
+      <scope>test</scope>
+ 
+    </dependency>
+  </dependencies>
+</project>
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Java + Maven (3)</h2>
+                        <p class="fragment roll-in">Struktur proyek Maven: </p>
+                        <br>
+                        <p class="middle fragment roll-in"><img src="img/maven-structure.png"></p>
+                    </section>
+
+                    <section>
+                        <h2>Python</h2>
+                        <p class="fragment roll-in">Multi-paradigm</p>
+                        <p class="fragment roll-in">Filosofi: mudah dibaca programmer</p>
+                        <p class="fragment roll-in">Interpreter</p>
+                        <p class="pdesc fragment roll-in">Python Interpreter (2.7.3)</p>
+                        <p class="pdesc fragment roll-in">Pustaka Standar Python</p>
+                        <p class="pdesc fragment roll-in">Pustaka Dependensi Lain</p>
+                    </section>
+
+                    <section>
+                        <h2>Python (2)</h2>
+                        <p class="fragment roll-in">hello.py: </p>
+                        <pre class="fragment roll-in"><code data-trim>
+                            print "Hello World!"
+                        </code></pre>
+                        <p class="fragment roll-in">eksekusi: </p>
+                        <p class="middle fragment roll-in">
+                            <img src="img/python-run.png">
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Google App Engine</h2>
+                    </section>
                 </section>
 
             </div>
