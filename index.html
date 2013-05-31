@@ -439,14 +439,173 @@ showpage             % print all on the page
                 </section>
 
                 <section data-state="submerge">
-                    <h2 class="middle">Skenario Sistem</h2>
-                    <table>
-                        <tr>
-                            <td class="fragment roll-in"><small>Server <i class="icon-arrow-right"></i> Akses Konten</small></td>
-                            <td class="fragment roll-in"><small>Client <i class="icon-arrow-right"></i> Mobile Device</small></td>
-                        </tr>
-                    </table>
-                    <p class="middle fragment roll-in"><img class="bare" src="img/f1.png" height="440"></p>
+                    <section>
+                        <h2>Skenario Sistem</h2>
+                        <table>
+                            <tr>
+                                <td class="fragment roll-in"><small>Server <i class="icon-arrow-right"></i> Akses Konten</small></td>
+                                <td class="fragment roll-in"><small>Client <i class="icon-arrow-right"></i> Mobile Device</small></td>
+                            </tr>
+                        </table>
+                        <p class="middle fragment roll-in"><img class="bare" src="img/f1.png" height="440"></p>
+                    </section>
+
+                    <section>
+                        <h2>Spesifikasi - Ebook Provider</h2>
+                        <p class="fragment roll-in">OPDS - Open Publication Distribution System</p>
+                        <p class="pdesc fragment roll-in">XML / Atom Document</p>
+                        <p class="pdesc fragment roll-in">Navigasi, Akuisisi, Informasi</p>
+                        <pre class="fragment"><code data-trim>
+                            <?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:dcterms="http://purl.org/dc/terms/" xmlns:thr="http://purl.org/syndication/thread/1.0" xmlns:opds="http://opds-spec.org/2010/catalog" xml:lang="en" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:app="http://www.w3.org/2007/app" xmlns="http://www.w3.org/2005/Atom">
+  <id>http://www.feedbooks.com/catalog.atom</id>
+  <title>Feedbooks</title>
+  <updated>2013-05-31T17:30:29Z</updated>
+  <icon>http://assets1.feedbooks.net/images/favicon.ico?t=1369910075</icon>
+  <author>
+    <name>Feedbooks</name>
+    <uri>http://www.feedbooks.com</uri>
+    <email>support@feedbooks.zendesk.com</email>
+  </author>
+  <link type="application/atom+xml; profile=opds-catalog; kind=navigation" href="http://www.feedbooks.com/catalog.atom" rel="self"/>
+  <link type="application/atom+xml;profile=opds-catalog;kind=navigation" title="Home" href="http://www.feedbooks.com/catalog.atom" rel="start"/>
+  <link type="application/opensearchdescription+xml" title="Search on Feedbooks" href="http://www.feedbooks.com/opensearch.xml" rel="search"/>
+  <link type="application/atom+xml;profile=opds-catalog;kind=acquisition" title="Bookshelf" href="https://www.feedbooks.com/user/bookshelf.atom" rel="http://opds-spec.org/shelf"/>
+<link type="application/atom+xml;profile=opds-catalog;kind=acquisition" title="New &amp; Noteworthy" href="http://www.feedbooks.com/featured.atom" rel="http://opds-spec.org/featured"/>
+<link type="application/atom+xml;profile=opds-catalog;kind=acquisition" title="Best Sellers" href="http://www.feedbooks.com/store/top.atom" rel="http://opds-spec.org/sort/popular"/>
+<link type="application/atom+xml;profile=opds-catalog;kind=acquisition" title="Public Domain Books" href="http://www.feedbooks.com/books/top.atom?range=month" rel="http://opds-spec.org/sort/popular"/>
+<entry>
+  <title>Best Sellers</title>
+  <link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://www.feedbooks.com/store/top.atom" rel="http://opds-spec.org/sort/popular"/>
+  <updated>2013-05-31T17:30:29Z</updated>
+  <id>http://www.feedbooks.com/books/top.atom?range=week</id>
+  <content type="text">All categories</content>
+</entry>
+<entry>
+  <title>New Releases</title>
+  <link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://www.feedbooks.com/store/recent.atom" rel="http://opds-spec.org/sort/new"/>
+  <updated>2013-05-31T17:30:29Z</updated>
+  <id>http://www.feedbooks.com/books/recent.atom</id>
+  <content type="text">Freshly arrived on Feedbooks</content>
+</entry>
+<entry>
+  <title>Fiction</title>
+  <id>http://www.feedbooks.com/store/categories/FBFIC000000.atom</id>
+  <link type="application/atom+xml;profile=opds-catalog" href="http://www.feedbooks.com/store/categories/FBFIC000000.atom" rel="subsection"/>
+  <updated>2013-05-31T17:30:29Z</updated>
+  <content type="text">Literary, Science Fiction, Romance, Thrillers, Fantasy</content>
+</entry>
+<entry>
+  <title>Non-Fiction</title>
+  <id>http://www.feedbooks.com/store/categories/FBNFC000000.atom</id>
+  <link type="application/atom+xml;profile=opds-catalog" href="http://www.feedbooks.com/store/categories/FBNFC000000.atom" rel="subsection"/>
+  <updated>2013-05-31T17:30:29Z</updated>
+  <content type="text">Biography &amp; autobiography, Travel, History, Health &amp; fitness, Philosophy</content>
+</entry>
+<entry>
+  <title>Free Books</title>
+  <link type="application/atom+xml;profile=opds-catalog;kind=navigation" href="http://www.feedbooks.com/site/free_books.atom" rel="subsection"/>
+  <updated>2013-05-31T17:30:29Z</updated>
+  <id>http://www.feedbooks.com/site/free_books.atom</id>
+  <content type="text">Thousands of free classics and originals</content>
+</entry>
+<entry>
+  <title>Recommended Readings</title>
+  <link type="application/atom+xml;profile=opds-catalog;kind=navigation" href="http://www.feedbooks.com/recommended.atom" rel="subsection"/>
+  <updated>2013-05-31T17:30:29Z</updated>
+  <id>http://www.feedbooks.com/recommended.atom</id>
+  <content type="text">Browse through our lists of recommended books</content>
+</entry>
+</feed>
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Spesifikasi - Ebook Provider (2)</h2>
+                        <p>Feedbooks</p>
+                        <p class="pdesc"><a href="http://www.feedbooks.com/catalog.atom">http://www.feedbooks.com/catalog.atom</a></p>
+                        <p>Epub Bud</p>
+                        <p class="pdesc"><a href="http://www.epubbud.com/feeds/catalog.atom">http://www.epubbud.com/feeds/catalog.atom</a></p>
+                        <p>Internet Archive</p>
+                        <p class="pdesc"><a href="http://bookserver.archive.org/catalog/">http://bookserver.archive.org/catalog/</a></p>
+                        <p>Pragpub Magazine</p>
+                        <p class="pdesc"><a href="http://pragprog.com/magazines.opds">http://pragprog.com/magazines.opds</a></p>
+                        <p>ManyBooks</p>
+                        <p class="pdesc"><a href="http://www.feedbooks.com/catalog.atom">http://manybooks.net/opds/</a></p>
+                    </section>
+
+                    <section>
+                        <h2>Spesifikasi - API Server</h2>
+                        <p>Perantara Client dan Konten Buku Digital</p>
+                        <br>
+                        <p class="fragment roll-in">Requirement: </p>
+                        <ul>
+                            <li class="fragment roll-in">Pengolah OPDS (Dokumen Atom / XML)</li>
+                            <li class="fragment roll-in">Server to server request</li>
+                            <li class="fragment roll-in">Client Request - GET, POST, PUT, DELETE</li>
+                            <li class="fragment roll-in">Client Response - JSON Format</li>
+                            <li class="fragment roll-in">Menyimpan data</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Spesifikasi - API Server (2)</h2>
+                        <p class="middle"><img class="bare" src="img/f2.png" height="500"></p>
+                    </section>
+
+                    <section>
+                        <h3>Spesifikasi - Infrastruktur API Server</h3>
+                        <p class="fragment roll-in">Jasa Penyedia Infrastruktur Server</p>
+                        <p class="pdesc fragment roll-in">Akses Jaringan</p>
+                        <p class="pdesc fragment roll-in">Keamanan Data</p>
+                    </section>
+
+                    <section>
+                        <h2>Spesifikasi - GAE untuk API Server</h2>
+                        <p class="fragment roll-in">Infrastruktur Google</p>
+                        <p class="fragment roll-in">Integrasi produk Google - Basis pengguna besar</p>
+                        <p class="fragment roll-in">HRD - High Replication Database</p>
+                        <p class="fragment roll-in">Ekonomis + Scalable</p>
+                        <p class="fragment roll-in">API Client Library - Cloud Endpoints</p>
+                        <p class="fragment roll-in">GAE SDK: <span style="color:red;">Python</span>, Java, Go, PHP</p>
+                    </section>
+
+                    <section>
+                        <h2>Spesifikasi - Database</h2>
+                        <p class="fragment roll-in">Informasi Perpustakaan Digital</p>
+                        <p class="pdesc fragment roll-in">Nama unik, misal: "feedbooks"</p>
+                        <p class="pdesc fragment roll-in">Nama resmi, misal: "Feedbooks Ebook Provider"</p>
+                        <p class="pdesc fragment roll-in">Alamat dokumen OPDS</p>
+                        <br>
+                        <p class="fragment roll-in">Informasi Pengguna</p>
+                        <p class="pdesc fragment roll-in">Acuan + Tautan data</p>
+                    </section>
+
+                    <section>
+                        <h2>Spesifikasi - Database (2)</h2>
+                        <p class="fragment roll-in">Informasi Buku Digital</p>
+                        <p class="pdesc fragment roll-in">Identitas, misal: "urn:isbn:9780316000000"</p>
+                        <p class="pdesc fragment roll-in">Tipe, PDF atau EPub</p>
+                        <br>
+                        <p class="fragment roll-in">Informasi Koleksi Buku Digital Pengguna</p>
+                        <p class="pdesc fragment roll-in">Nama koleksi</p>
+                        <p class="pdesc fragment roll-in">Buku digital, tautan</p>
+                    </section>
+
+                    <section>
+                        <h2>Spesifikasi - Database (3)</h2>
+                        <p class="fragment roll-in">Informasi Aktifitas Membaca</p>
+                        <p class="pdesc fragment roll-in">Buku digital, tautan</p>
+                        <p class="pdesc fragment roll-in">Index</p>
+                        <p class="pdesc fragment roll-in">Progres</p>
+                        <p class="pdesc fragment roll-in">Persentase</p>
+                        <p class="pdesc fragment roll-in">Perangkat, tautan</p>
+                        <br>
+                        <p class="fragment roll-in">Informasi Perangkat Pengguna</p>
+                        <p class="pdesc fragment roll-in">Versi Aplikasi</p>
+                        <p class="pdesc fragment roll-in">Nama Vendor</p>
+                        <p class="pdesc fragment roll-in">OS</p>
+                    </section>
                 </section>
 
             </div>
