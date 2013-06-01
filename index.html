@@ -657,6 +657,113 @@ showpage             % print all on the page
                     </section>
                 </section>
 
+                <section data-state="alert">
+                    <h2 class="middle">Implementasi dan Evaluasi</h2>
+                </section>
+
+                <section data-state="alert">
+                    <section>
+                        <h2>Implementasi</h2>
+                        <p class="fragment roll-in">API Server</p>
+                        <p class="pdesc fragment roll-in">Google App Engine</p>
+                        <p class="pdesc fragment roll-in">GAE Python SDK - Python 2.7</p>
+                        <p class="pdesc fragment roll-in">Google Cloud Endpoints</p>
+                        <br>
+                        <p class="fragment roll-in">Client</p>
+                        <p class="pdesc fragment roll-in">ITBookReader</p>
+                        <p class="pdesc fragment roll-in">Sistem Operasi Android</p>
+                    </section>
+
+                    <section>
+                        <h2>Implementasi - API Server</h2>
+                        <p class="fragment roll-in">Pendaftaran GAE Instance</p>
+                        <p class="pdesc fragment roll-in">Nama Instance: 'itbook-app'</p>
+                        <p class="pdesc fragment roll-in"><a href="itbook-app.appspot.com">itbook-app.appspot.com</a></p>
+                        <p class="fragment roll-in">Pendaftaran API Client ID</p>
+                        <p class="pdesc fragment roll-in">Google APIs Console</p>
+                        <p class="pdesc fragment roll-in">Identifikasi Client</p>
+                    </section>
+
+                    <section>
+                        <h2>Implementasi - API Server</h2>
+                        <p class="middle"><img src="img/cid-web.png" alt=""></p>
+                        <p class="middle"><img src="img/cid-android.png" alt=""></p>
+                    </section>
+
+                    <section>
+                        <h2>Implementasi - API Server</h2>
+                        <p>Kode Representasi Database (Model Class)</p>
+                        <pre><code data-trim>
+                            from google.appengine.ext import ndb  
+
+
+class NamaModel(ndb.Model):  
+
+    property1 = ndb.StringProperty('p1')  
+    property2 = ndb.DateTimeProperty('p2', auto_now=True)
+
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Implementasi - API Server</h2>
+                        <p>Memasukkan data Perpustakaan Digital</p>
+                        <pre><code data-trim>
+                            from application.models.catalog import Catalog  
+  
+catalog1 = Catalog()  
+catalog1.name = 'feedbooks'  
+catalog1.title = 'Feedbooks'  
+catalog1.url = 'http://www.feedbooks.com/site/free_books.atom'  
+  
+catalog2 = Catalog()  
+catalog2.name = 'epubbud'  
+catalog2.title = 'ePub Bud | OPDS Catalog | All Books'  
+catalog2.url = 'http://www.epubbud.com/feeds/catalog.atom'  
+  
+catalog3 = Catalog()  
+catalog3.name = 'manybooks'  
+catalog3.title = 'ManyBooks.net'  
+catalog3.url = 'http://manybooks.net/opds'  
+  
+catalog4 = Catalog()  
+catalog4.name = 'internetarchive'  
+catalog4.title = 'Internet Archive Catalog'  
+catalog4.url = 'http://bookserver.archive.org/catalog'  
+  
+catalog5 = Catalog()  
+catalog5.name = 'pragpub'  
+catalog5.title = 'PragPub Magazine | The Pragmatic Bookshelf'  
+catalog5.url = 'http://pragprog.com/magazines.opds'  
+  
+catalog1.put()  
+catalog2.put()  
+catalog3.put()  
+catalog4.put()  
+catalog5.put()  
+print(catalog1)  
+print(catalog2)  
+print(catalog3)  
+print(catalog4)  
+print(catalog5)
+
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Implementasi - API Server</h2>
+                        <p class="middle"><img src="img/c-output.png" alt=""></p>
+                    </section>
+                    <section>
+                        <h2>Implementasi - API Server</h2>
+                        <p class="middle"><img src="img/c-console.png" alt=""></p>
+                    </section>
+                    <section>
+                        <h2>Implementasi - API Server</h2>
+                        <p class="middle"><img src="img/c-dviewer.png" alt=""></p>
+                    </section>
+                </section>
+
             </div>
 
         </div>
